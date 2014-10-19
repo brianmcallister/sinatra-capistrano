@@ -1,8 +1,9 @@
 # config valid only for Capistrano 3.1
 lock '3.2.1'
 
-set :application, 'my_app_name'
-set :repo_url, 'git@example.com:me/my_repo.git'
+set :application, 'sinatra-capistrano'
+set :repo_url, 'git@github.com:brianmcallister/sinatra-capistrano.git'
+set :branch, 'master'
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
