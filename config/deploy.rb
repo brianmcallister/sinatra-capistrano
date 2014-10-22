@@ -56,6 +56,10 @@ namespace :deploy do
         execute :pwd
       end
       
+      within release_path do
+        rake 'test'
+      end
+      
       # Your restart mechanism here, for example:
       # execute :touch, release_path.join('tmp/restart.txt')
     end
