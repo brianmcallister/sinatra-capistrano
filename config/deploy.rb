@@ -62,7 +62,7 @@ namespace :deploy do
       
       within release_path do
         rake 'test'
-        sass '-v'
+        execute :sass, '-v'
       end
       
       # Your restart mechanism here, for example:
