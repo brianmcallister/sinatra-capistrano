@@ -49,20 +49,7 @@ namespace :deploy do
   desc 'Restart application'
   task :restart do
     on roles(:web) do      
-      within deploy_path do
-        execute :echo, 'deploy_path ----------------'
-        execute :pwd
-      end
-      
-      within release_path do
-        execute :echo, 'release_path ----------------'
-        execute :pwd
-      end
-      
-      within release_path do
-        rake 'test'
-        execute :sass, '-v'
-      end
+      rake 'test'
       
       # Your restart mechanism here, for example:
       # execute :touch, release_path.join('tmp/restart.txt')
