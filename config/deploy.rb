@@ -50,7 +50,7 @@ namespace :deploy do
   task :restart do
     on roles(:web) do      
       within release_path do
-        execute :sass, '-v'
+        rake 'test'
       end
       
       # Your restart mechanism here, for example:
